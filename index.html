@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anchor — Uptime monitoring for teams who ship fast</title>
+<meta name="description" content="Anchor watches your services around the clock and tells you the moment something breaks — before your customers do.">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="noise-overlay" aria-hidden="true"></div>
+
+<!-- ===== HEADER ===== -->
+<header class="site-header" id="top">
+  <div class="wrap header-inner">
+    <a href="#top" class="brand">
+      <img src="assets/logo.svg" alt="" class="brand-mark" width="28" height="28">
+      <span>Anchor</span>
+    </a>
+
+    <nav class="main-nav" id="main-nav">
+      <a href="#product">Product</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="header-actions">
+      <a href="#contact" class="btn btn-ghost">Sign in</a>
+      <a href="#pricing" class="btn btn-primary">Start free trial</a>
+    </div>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="main-nav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="live-dot" aria-hidden="true"></span> All systems operational — 214ms avg response</p>
+        <h1>Know it's down<br> before your customers do.</h1>
+        <p class="hero-sub">Anchor checks every endpoint, queue, and cron job on a heartbeat you control, then puts the right person on the incident in under 30 seconds. No dashboards to babysit.</p>
+        <div class="hero-cta">
+          <a href="#pricing" class="btn btn-primary btn-lg">Start free trial</a>
+          <a href="#product" class="btn btn-outline btn-lg">See how it works</a>
+        </div>
+        <p class="hero-fineprint">14-day trial · No credit card · 2-minute setup</p>
+      </div>
+
+      <div class="hero-visual" aria-hidden="true">
+        <div class="pulse-card">
+          <div class="pulse-card-head">
+            <span class="pulse-tag pulse-tag-ok">200 OK</span>
+            <span class="pulse-service">api.checkout.service</span>
+          </div>
+          <svg class="pulse-graph" viewBox="0 0 480 140" preserveAspectRatio="none">
+            <line x1="0" y1="105" x2="480" y2="105" class="pulse-baseline"/>
+            <path class="pulse-line" d="M0,105 L40,105 L55,105 L65,40 L75,105 L120,105 L140,105 L152,20 L164,105 L220,105 L260,105 L272,70 L284,105 L340,105 L360,105 L372,15 L384,105 L480,105" />
+          </svg>
+          <div class="pulse-stats">
+            <div><span class="stat-num">99.99%</span><span class="stat-label">uptime</span></div>
+            <div><span class="stat-num">28s</span><span class="stat-label">avg alert time</span></div>
+            <div><span class="stat-num">312</span><span class="stat-label">checks / min</span></div>
+          </div>
+        </div>
+        <div class="incident-toast">
+          <span class="live-dot live-dot-warn" aria-hidden="true"></span>
+          <div>
+            <strong>Latency spike detected</strong>
+            <span>worker-queue-3 · paging on-call</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== LOGO STRIP ===== -->
+  <section class="logo-strip">
+    <div class="wrap">
+      <p class="logo-strip-label">Trusted by engineering teams at</p>
+      <ul class="logo-row">
+        <li>Northwind</li>
+        <li>Fernbank</li>
+        <li>Loom&amp;Co</li>
+        <li>Haven Labs</li>
+        <li>Quiet Systems</li>
+        <li>Basecamp&nbsp;Freight</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== PRODUCT / FEATURES ===== -->
+  <section class="features" id="product">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow eyebrow-plain">Product</p>
+        <h2>Built for the 3am page, not the demo.</h2>
+        <p class="section-sub">Every feature exists to shorten the time between something breaking and someone fixing it.</p>
+      </div>
+
+      <div class="feature-grid">
+        <article class="feature-card feature-card-lg">
+          <span class="feature-code">GET /status</span>
+          <h3>Checks from everywhere your users are</h3>
+          <p>HTTP, TCP, DNS, SSL, and cron heartbeats monitored from 14 global regions, as often as every 10 seconds.</p>
+        </article>
+        <article class="feature-card">
+          <span class="feature-code">POST /alert</span>
+          <h3>Alerts that reach a human</h3>
+          <p>SMS, phone call, Slack, and PagerDuty escalation with on-call schedules built in.</p>
+        </article>
+        <article class="feature-card">
+          <span class="feature-code">GET /status-page</span>
+          <h3>Status pages in one click</h3>
+          <p>A branded, hosted status page your customers can trust — updated automatically as incidents resolve.</p>
+        </article>
+        <article class="feature-card">
+          <span class="feature-code">GET /timeline</span>
+          <h3>A timeline for every incident</h3>
+          <p>Automatic postmortem timelines: what broke, who was paged, and how long it took to recover.</p>
+        </article>
+        <article class="feature-card">
+          <span class="feature-code">GET /integrations</span>
+          <h3>Fits your stack</h3>
+          <p>Slack, PagerDuty, Opsgenie, Datadog, and a documented REST API for everything else.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIAL ===== -->
+  <section class="testimonial">
+    <div class="wrap testimonial-inner">
+      <blockquote>
+        “We replaced two tools and a spreadsheet of phone numbers with Anchor. Our mean time to acknowledge dropped from 11 minutes to 40 seconds in the first month.”
+      </blockquote>
+      <div class="testimonial-author">
+        <span class="author-name">Dara Fenwick</span>
+        <span class="author-role">Head of Infrastructure, Haven Labs</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PRICING ===== -->
+  <section class="pricing" id="pricing">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow eyebrow-plain">Pricing</p>
+        <h2>Plans that scale with your fleet.</h2>
+        <p class="section-sub">Every plan includes unlimited team members and a 14-day free trial.</p>
+      </div>
+
+      <div class="billing-toggle" role="group" aria-label="Billing period">
+        <button type="button" class="toggle-opt is-active" data-period="monthly">Monthly</button>
+        <button type="button" class="toggle-opt" data-period="yearly">Yearly <span class="save-badge">save 20%</span></button>
+      </div>
+
+      <div class="pricing-grid">
+
+        <article class="price-card">
+          <h3>Starter</h3>
+          <p class="price-desc">For side projects and small services.</p>
+          <p class="price-amount"><span class="price-num" data-monthly="19" data-yearly="15">$19</span><span class="price-period">/mo</span></p>
+          <a href="#contact" class="btn btn-outline btn-block">Start free trial</a>
+          <ul class="price-features">
+            <li>10 monitors</li>
+            <li>1-minute check interval</li>
+            <li>Email + Slack alerts</li>
+            <li>3-day incident history</li>
+          </ul>
+        </article>
+
+        <article class="price-card price-card-featured">
+          <span class="price-flag">Most popular</span>
+          <h3>Team</h3>
+          <p class="price-desc">For growing engineering teams.</p>
+          <p class="price-amount"><span class="price-num" data-monthly="59" data-yearly="47">$59</span><span class="price-period">/mo</span></p>
+          <a href="#contact" class="btn btn-primary btn-block">Start free trial</a>
+          <ul class="price-features">
+            <li>100 monitors</li>
+            <li>10-second check interval</li>
+            <li>SMS, call &amp; on-call schedules</li>
+            <li>Hosted status page</li>
+            <li>90-day incident history</li>
+          </ul>
+        </article>
+
+        <article class="price-card">
+          <h3>Enterprise</h3>
+          <p class="price-desc">For fleets with compliance needs.</p>
+          <p class="price-amount"><span class="price-num-static">Custom</span></p>
+          <a href="#contact" class="btn btn-outline btn-block">Talk to sales</a>
+          <ul class="price-features">
+            <li>Unlimited monitors</li>
+            <li>Private regions &amp; SSO</li>
+            <li>SLA &amp; audit logs</li>
+            <li>Dedicated support engineer</li>
+          </ul>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="faq" id="faq">
+    <div class="wrap faq-inner">
+      <div class="section-head section-head-left">
+        <p class="eyebrow eyebrow-plain">FAQ</p>
+        <h2>Good to know.</h2>
+      </div>
+      <div class="faq-list">
+        <details class="faq-item" open>
+          <summary>How fast are alerts actually sent?</summary>
+          <p>Most incidents are detected and paged in under 30 seconds from the failed check, using the region closest to your service.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Can I move from another monitoring tool?</summary>
+          <p>Yes — import your monitors via CSV or our API, and our team will help you migrate on-call schedules for free.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Do you offer a self-hosted option?</summary>
+          <p>Enterprise plans include a self-hosted or single-tenant deployment for teams with strict data residency needs.</p>
+        </details>
+        <details class="faq-item">
+          <summary>What happens after the trial ends?</summary>
+          <p>You'll be prompted to pick a plan. Nothing is charged automatically, and your monitors are paused, not deleted.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="contact" id="contact">
+    <div class="wrap contact-grid">
+      <div class="contact-copy">
+        <p class="eyebrow eyebrow-plain">Contact</p>
+        <h2>Talk to the team.</h2>
+        <p class="section-sub">Questions about pricing, migrating your monitors, or an enterprise deployment — we usually reply within a few hours.</p>
+        <ul class="contact-details">
+          <li><span>Email</span>hello@anchorstatus.io</li>
+          <li><span>Support</span>support@anchorstatus.io</li>
+        </ul>
+      </div>
+
+      <form class="contact-form" id="contactForm" novalidate>
+        <div class="form-row">
+          <div class="form-field">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" autocomplete="name" required>
+          </div>
+          <div class="form-field">
+            <label for="email">Work email</label>
+            <input type="email" id="email" name="email" autocomplete="email" required>
+          </div>
+        </div>
+        <div class="form-field">
+          <label for="company">Company</label>
+          <input type="text" id="company" name="company" autocomplete="organization">
+        </div>
+        <div class="form-field">
+          <label for="message">How can we help?</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block btn-lg">Send message</button>
+        <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <a href="#top" class="brand brand-footer">
+      <img src="assets/logo.svg" alt="" class="brand-mark" width="24" height="24">
+      <span>Anchor</span>
+    </a>
+    <ul class="footer-links">
+      <li><a href="#product">Product</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <p class="footer-copy">© 2026 Anchor Status, Inc.</p>
+  </div>
+</footer>
+
+<script src="assets/script.js"></script>
+</body>
+</html>
